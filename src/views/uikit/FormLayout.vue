@@ -42,7 +42,7 @@ function normalizarCadena(cadena) {
 </script>
 
 <template>
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto p-4 max-w-[60rem]">
         <h2 class="text-xl font-semibold mb-4">Generador de RFC</h2>
 
         <div class="grid gap-4">
@@ -53,12 +53,14 @@ function normalizarCadena(cadena) {
 
             <div>
                 <label for="apellidoPaterno">Apellido Paterno</label>
-                <input type="text" v-model="apellidoPaterno" id="apellidoPaterno" class="border p-2 w-full" placeholder="Apellido Paterno" />
+                <input type="text" v-model="apellidoPaterno" id="apellidoPaterno" class="border p-2 w-full"
+                    placeholder="Apellido Paterno" />
             </div>
 
             <div>
                 <label for="apellidoMaterno">Apellido Materno</label>
-                <input type="text" v-model="apellidoMaterno" id="apellidoMaterno" class="border p-2 w-full" placeholder="Apellido Materno" />
+                <input type="text" v-model="apellidoMaterno" id="apellidoMaterno" class="border p-2 w-full"
+                    placeholder="Apellido Materno" />
             </div>
 
             <div>
@@ -66,8 +68,9 @@ function normalizarCadena(cadena) {
                 <input type="date" v-model="fechaNacimiento" id="fechaNacimiento" class="border p-2 w-full" />
             </div>
 
-            <button @click="generarRFC" class="bg-blue-500 text-white py-2 px-4 rounded">Generar RFC</button>
+            <button @click="generarRFC" class="bg-green-500 text-white py-2 px-4 rounded">Generar RFC</button>
         </div>
+
 
         <div v-if="rfc" class="mt-4">
             <h3 class="text-lg font-semibold">RFC Generado:</h3>
